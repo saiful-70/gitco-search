@@ -48,7 +48,7 @@ export default function Home() {
           </Link>
         </div>
         <Link
-          href="https://github.com/"
+          href="https://github.com/saiful-70/gitco-search"
           target="_blank"
           className="underline hover:text-blue-600"
         >
@@ -57,7 +57,7 @@ export default function Home() {
         <p>
           Copyright &copy;
           <Link
-            href="https://github.com/"
+            href="https://github.com/saiful-70/"
             target="_blank"
             className="underline hover:text-blue-600"
           >
