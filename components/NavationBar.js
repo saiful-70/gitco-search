@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const NavigationBar = () => {
+  const router = useRouter();
+  // console.log(router.asPath)
   return (
     <>
       <div className="flex justify-center my-5 mb-10">
@@ -14,7 +17,9 @@ const NavigationBar = () => {
         </Link>
         <Link
           href="/codeforces"
-          className="decoration-none text-white font-bold no-underline hover:underline text-lg"
+          className={`decoration-none text-white font-bold hover:underline text-lg ${
+            router.asPath === "/codeforces" ? "underline" : ""
+          }`}
         >
           <h6 className="w-32 mx-1 bg-indigo-500 py-2 rounded-lg text-center pl-0">
             Codeforces
@@ -22,7 +27,9 @@ const NavigationBar = () => {
         </Link>
         <Link
           href="/github"
-          className="decoration-none text-white font-bold no-underline hover:underline text-lg"
+          className={`decoration-none text-white font-bold hover:underline text-lg ${
+            router.asPath === "/github" ? "underline" : ""
+          }`}
         >
           <h6 className="w-32 mx-1 bg-gradient-to-r from-blue-400  to-red-500 py-2 rounded-lg text-center pl-0">
             Github

@@ -3,7 +3,7 @@ import axios from "axios";
 
 import { useDataContext } from "../../context/DataContext";
 
-const UserSearch = ({ handle, setHandle, searchUser, setLoading, loading }) => {
+const UserSearch = ({ handle, setHandle, searchUser, setLoading, loading, label }) => {
   const searchRef = useRef(null);
 
   useEffect(() => {
@@ -18,10 +18,10 @@ const UserSearch = ({ handle, setHandle, searchUser, setLoading, loading }) => {
         searchUser(handle);
       }}
     >
-      <label className="font-bold text-lg">Handle/Username</label>
+      <label className="font-bold text-lg">{label}</label>
       <input
         type="text"
-        placeholder="Enter Codeforces Handle"
+        placeholder={`Enter ${label}`}
         ref={searchRef}
         className="pl-2 border-2 py-2 rounded-lg outline-blue-400"
       />

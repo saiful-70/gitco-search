@@ -1,25 +1,8 @@
-import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
-import styles from "../styles/Home.module.css";
-import UserSearch from "../components/Forms/UserSearch";
-import ProfileCard from "../components/Cards/ProfileCard";
-import { useDataContext } from "../context/DataContext";
-import { useEffect } from "react";
-import NavigationBar from "../components/NavationBar";
 import Link from "next/link";
 
 export default function Home() {
-  // const { user, handle } = useDataContext();
   const router = useRouter();
-
-  // useEffect(() => {
-  //   if (user) {
-  //     // window.onload((e) => {
-  //     router.push("/my-profile");
-  //     // });
-  //   }
-  // }, [router, user]);
 
   return (
     <div className="container flex flex-col items-center my-0 mx-auto w-screen min-h-screen justify-center">

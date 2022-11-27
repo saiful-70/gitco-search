@@ -29,7 +29,7 @@ const Index = () => {
         const data1 = await response1.result[0];
         const data2 = await response2.result[1];
 
-        await setUser({ currentRank: data1.rank, ...data1, ...data2 });
+        setUser({ currentRank: data1.rank, ...data1, ...data2 });
         console.log(user);
         // console.log(data1, data2);
         // console.log("user info", data1, "user rating", data2);
@@ -44,16 +44,6 @@ const Index = () => {
     }
   };
 
-  useEffect(() => {
-    const localHandle = localStorage.getItem("handle");
-    // console.log(localHandle);
-    // console.log(searchUser());
-    // if (handle) {
-    //   searchUser(handle);
-    //   console.log(user);
-    // }
-    // console.log(user);
-  }, []);
   return (
     <Layout>
       <div className="w-full md:w-1/2">
@@ -63,6 +53,7 @@ const Index = () => {
           searchUser={searchUser}
           loading={loading}
           setLoading={setLoading}
+          label="Codeforces Handle"
         />
         {/* {user && user.handle && ( */}
         <h5
